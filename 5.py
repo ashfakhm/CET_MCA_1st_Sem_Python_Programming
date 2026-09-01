@@ -15,6 +15,9 @@ This program demonstrates common operations performed on dictionaries:
 11. Swap two numbers.
 12. Swap two numbers without using a temporary variable.
 13. Sort a dictionary.
+14. Create a one-dimensional (1D) matrix.
+15. Create a two-dimensional (2D) matrix and perform addition.
+16. Create a three-dimensional (3D) matrix and perform transpose.
 """
 
 # 1. Input from user and create a dictionary
@@ -67,6 +70,7 @@ else:
 
 # 6. Remove all values from the dictionary
 person.clear()
+
 print(f"Dictionary after removing all values: {person}")
 
 
@@ -129,3 +133,40 @@ sorted_scores = dict(sorted(scores.items()))
 
 print(f"Original dictionary: {scores}")
 print(f"Sorted dictionary: {sorted_scores}")
+
+
+# 14. Create a 1D matrix
+matrix_1d = [10, 20, 30, 40, 50]
+
+print(f"1D matrix: {matrix_1d}")
+
+
+# 15. Create a 2D matrix and perform addition
+first_matrix = [[1, 2], [3, 4]]
+
+second_matrix = [[5, 6], [7, 8]]
+
+result_matrix = [
+    [first_matrix[i][j] + second_matrix[i][j] for j in range(len(first_matrix[0]))]
+    for i in range(len(first_matrix))
+]
+
+print(f"First matrix: {first_matrix}")
+print(f"Second matrix: {second_matrix}")
+print(f"Result after addition: {result_matrix}")
+for row in result_matrix:
+    print(row)
+
+
+# 16. Create a 3D matrix and perform transpose
+matrix_3d = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]
+
+# Transpose by reversing axes (equivalent to np.transpose without axes)
+# Original shape (2, 2, 2) -> Transposed shape (2, 2, 2) where transposed[i][j][k] = original[k][j][i]
+d0, d1, d2 = len(matrix_3d), len(matrix_3d[0]), len(matrix_3d[0][0])
+transposed_matrix = [
+    [[matrix_3d[k][j][i] for k in range(d0)] for j in range(d1)] for i in range(d2)
+]
+
+print(f"Original 3D matrix: {matrix_3d}")
+print(f"Transposed 3D matrix: {transposed_matrix}")
