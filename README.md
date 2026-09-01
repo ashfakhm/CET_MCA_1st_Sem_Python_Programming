@@ -3,7 +3,7 @@
 Practical lab exercises and problem-solving implementations for the first-semester Master of Computer Applications (MCA) curriculum at the College of Engineering Trivandrum (CET).
 
 <p align="center">
-  <img src="https://shieldcn.dev/badge/Python-3.8+-3776AB.svg?variant=secondary&logo=python" alt="Python 3.8+" />
+  <img src="https://shieldcn.dev/badge/Python-3.14-3776AB.svg?variant=secondary&logo=python" alt="Python 3.14" />
   <img src="https://shieldcn.dev/badge/Curriculum-CET_MCA_Sem_1-7c3aed.svg?variant=secondary" alt="Curriculum: CET MCA Sem 1" />
   <img src="https://shieldcn.dev/badge/Status-Active_Lab-059669.svg?variant=secondary" alt="Status: Active Lab" />
 </p>
@@ -43,12 +43,14 @@ flowchart LR
         D --> D3["Digit Extract & Binary Convert"]
     end
 
-    subgraph Lab05["Dictionary Operations"]
+    subgraph Lab05["Dictionary & Matrix Operations"]
         direction TB
-        E["5.py: Dictionary Practice"]
+        E["5.py: Dictionary & Matrix Practice"]
         E --> E1["Create, Insert & Lookup"]
         E --> E2["Merge & Update"]
         E --> E3["Swap & Sort Keys"]
+        E --> E4["1D & 2D Matrices (Pure Python)"]
+        E --> E5["3D Transpose (No NumPy)"]
     end
 
     subgraph Lab06["Score Processing"]
@@ -66,7 +68,7 @@ flowchart LR
 
 ## Overview
 
-This repository contains Python programming laboratory implementations developed for the first-semester MCA coursework at the College of Engineering Trivandrum (CET). Each program demonstrates fundamental concepts in Python 3, spanning user input handling, string parsing, list transformations, dictionary operations, score parsing, tournament points aggregation, and built-in method utilization.
+This repository contains Python programming laboratory implementations developed for the first-semester MCA coursework at the College of Engineering Trivandrum (CET). Each program demonstrates fundamental concepts in Python 3.14, spanning user input handling, string parsing, list transformations, dictionary operations, pure-Python matrix workflows (1D/2D addition and 3D transpose without NumPy), score parsing, tournament points aggregation, and built-in method utilization.
 
 ---
 
@@ -78,7 +80,7 @@ This repository contains Python programming laboratory implementations developed
 | [2.py](./2.py) | Shopping Cart Discount Calculator | List manipulation (`min`, `remove`), list comprehension, aggregation (`sum`), decimal formatting                 | Complete |
 | [3.py](./3.py) | String Methods & Slicing Suite    | Case transformation, substring slicing, midpoint division, string strip, character replacement, stride filtering | Complete |
 | [4.py](./4.py) | List Operations Practice          | Sorting (`sort`), reversing (`reverse`), insertion (`insert`/`append`), removal (`remove`/`pop`/`clear`), digit extraction, binary conversion (`bin`), square roots (`math.sqrt`), manual number reversal | Complete |
-| [5.py](./5.py) | Dictionary Operations Practice    | Dict creation, insertion, lookup, deletion (`pop`/`clear`), values/keys extraction, update, merge (`\|`), variable swapping, sorting (`sorted`) | Complete |
+| [5.py](./5.py) | Dictionary & Matrix Operations Practice | Dict creation, insertion, lookup, deletion (`pop`/`clear`), values/keys extraction, update, merge (`\|`), variable swapping, sorting (`sorted`), 1D list matrix, 2D addition via list comprehensions, 3D transpose by axis reversal (no NumPy) | Complete |
 | [6.py](./6.py) | Sports Tournament Points Table Generator | Score parsing (`split`/`map`), conditional counting, points accumulation (3/1/0), dictionary summary | Complete |
 
 ---
@@ -89,7 +91,7 @@ This repository contains Python programming laboratory implementations developed
 - **Collection Transformation:** Manipulate numeric lists by identifying minimum entries, generating discounted price collections with list comprehensions, and computing rounded totals.
 - **String Manipulation:** Apply standard library string methods and slicing syntax to reverse, subdivide, search, count, and filter character sequences.
 - **List Operations:** Demonstrate 14 essential list workflows — sorting, reversing, indexed insertion/removal, digit extraction, binary conversion, and manual number reversal with input validation.
-- **Dictionary Operations:** Demonstrate 13 dictionary workflows — key-value creation, lookup, deletion, merging via `|`, view extraction (`keys`/`values`), in-place update, and key-sorted ordering.
+- **Dictionary & Matrix Operations:** Demonstrate 16 workflows — key-value creation, lookup, deletion, merging via `|`, view extraction (`keys`/`values`), in-place update, key-sorted ordering, plus pure-Python 1D/2D/3D matrix creation, 2D addition, and 3D transpose without NumPy.
 - **Score Processing & Aggregation:** Parse hyphen-delimited score strings, classify wins/draws/losses, accumulate league points (3 for win / 1 for draw), and emit a summary dictionary.
 
 ---
@@ -105,13 +107,17 @@ cd CET_MCA_1st_Sem_Python_Programming
 
 ### 2. Verify Python Installation
 
-Ensure Python 3.8 or higher is installed:
+Ensure Python 3.14 or higher is installed (see `.python-version`):
 
 ```bash
 python3 --version
 ```
 
-No external third-party dependencies are required. All programs run on the standard Python runtime.
+All lab programs run on the standard Python runtime with no required third-party dependencies. Pure-Python matrix operations in `5.py` avoid NumPy. If `uv` is available, an optional environment can be set up via:
+
+```bash
+uv sync
+```
 
 ---
 
@@ -226,9 +232,9 @@ List after inserting 99 at position 1: [10, 99, 20, 30, 40]
 
 ---
 
-### Program 5: Dictionary Operations Practice (`5.py`)
+### Program 5: Dictionary & Matrix Operations Practice (`5.py`)
 
-Demonstrates 13 dictionary operations — creation from user input, key-value insertion, lookup, value deletion vs key removal, clearing, `values()`/`keys()` extraction, in-place update, merging with `|`, variable swapping, and key-sorted ordering.
+Demonstrates 16 operations — dictionary creation from user input, key-value insertion, lookup, value deletion vs key removal, clearing, `values()`/`keys()` extraction, in-place update, merging with `|`, variable swapping, key-sorted ordering, plus pure-Python 1D matrix, 2D matrix addition, and 3D transpose without NumPy.
 
 ```bash
 python3 5.py
@@ -261,6 +267,14 @@ First number: 20
 Second number: 10
 Original dictionary: {'John': 75, 'Alex': 90, 'David': 60, 'Sam': 85}
 Sorted dictionary: {'Alex': 90, 'David': 60, 'John': 75, 'Sam': 85}
+1D matrix: [10, 20, 30, 40, 50]
+First matrix: [[1, 2], [3, 4]]
+Second matrix: [[5, 6], [7, 8]]
+Result after addition: [[6, 8], [10, 12]]
+[6, 8]
+[10, 12]
+Original 3D matrix: [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]
+Transposed 3D matrix: [[[1, 5], [3, 7]], [[2, 6], [4, 8]]]
 ```
 
 ---
@@ -290,7 +304,10 @@ CET_MCA_1st_Sem_Python_Programming/
 ├── 2.py              # Shopping cart price and discount calculator
 ├── 3.py              # String manipulation and built-in methods practice
 ├── 4.py              # List operations — sort, reverse, insert, remove, pop, clear, digit extract, binary
-├── 5.py              # Dictionary operations — create, lookup, delete, merge, update, swap, sort
+├── 5.py              # Dictionary & matrix — create, lookup, delete, merge, update, swap, sort, 1D/2D/3D pure-Python matrices
 ├── 6.py              # Tournament points — parse scores, count W/D/L, calculate points, build summary dict
+├── pyproject.toml    # uv project metadata (requires-python >=3.14)
+├── uv.lock           # Locked dependency graph
+├── .python-version   # Python 3.14 pin
 └── README.md         # Repository documentation and program guide
 ```
