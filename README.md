@@ -61,14 +61,64 @@ flowchart LR
         F --> F3["Build Summary Dictionary"]
     end
 
-    Lab01 --> Lab02 --> Lab03 --> Lab04 --> Lab05 --> Lab06
+    subgraph Lab07["Pattern Generation"]
+        direction TB
+        G["7.py: Star Pattern"]
+        G --> G1["Increasing Stars Loop"]
+        G --> G2["Decreasing Stars Loop"]
+    end
+
+    subgraph Lab08["Math Functions"]
+        direction TB
+        H["8.py: GCD Calculator"]
+        H --> H1["Euclidean Algorithm"]
+        H --> H2["Modulo Iteration"]
+    end
+
+    subgraph Lab09["Frequency Analysis"]
+        direction TB
+        I["9.py: Character Frequency"]
+        I --> I1["Dictionary Counting"]
+        I --> I2["Iterate & Tally"]
+    end
+
+    subgraph Lab10["Series Generation"]
+        direction TB
+        J["10.py: Fibonacci Series"]
+        J --> J1["Iterative Generation"]
+        J --> J2["Tuple Unpacking Swap"]
+    end
+
+    subgraph Lab11["String Expression"]
+        direction TB
+        K["11.py: n+nn+nnn"]
+        K --> K1["String Repetition"]
+        K --> K2["Type Conversion & Sum"]
+    end
+
+    subgraph Lab12["Text Analysis"]
+        direction TB
+        L["12.py: Longest Word"]
+        L --> L1["Split & Iterate"]
+        L --> L2["Max by Key Length"]
+    end
+
+    subgraph Lab13["Functional Programming"]
+        direction TB
+        M["13.py: Area Calculator"]
+        M --> M1["Lambda: Square"]
+        M --> M2["Lambda: Rectangle"]
+        M --> M3["Lambda: Triangle"]
+    end
+
+    Lab01 --> Lab02 --> Lab03 --> Lab04 --> Lab05 --> Lab06 --> Lab07 --> Lab08 --> Lab09 --> Lab10 --> Lab11 --> Lab12 --> Lab13
 ```
 
 ---
 
 ## Overview
 
-This repository contains Python programming laboratory implementations developed for the first-semester MCA coursework at the College of Engineering Trivandrum (CET). Each program demonstrates fundamental concepts in Python 3.14, spanning user input handling, string parsing, list transformations, dictionary operations, pure-Python matrix workflows (1D/2D addition and 3D transpose without NumPy), score parsing, tournament points aggregation, and built-in method utilization.
+This repository contains Python programming laboratory implementations developed for the first-semester MCA coursework at the College of Engineering Trivandrum (CET). Each program demonstrates fundamental concepts in Python 3.14, spanning user input handling, string parsing, list transformations, dictionary operations, pure-Python matrix workflows (1D/2D addition and 3D transpose without NumPy), score parsing, tournament points aggregation, pattern generation, GCD computation via Euclidean algorithm, character frequency analysis, Fibonacci series generation, string-based numeric expressions, longest word detection, and lambda-based functional area calculations.
 
 ---
 
@@ -82,6 +132,13 @@ This repository contains Python programming laboratory implementations developed
 | [4.py](./4.py) | List Operations Practice          | Sorting (`sort`), reversing (`reverse`), insertion (`insert`/`append`), removal (`remove`/`pop`/`clear`), digit extraction, binary conversion (`bin`), square roots (`math.sqrt`), manual number reversal | Complete |
 | [5.py](./5.py) | Dictionary & Matrix Operations Practice | Dict creation, insertion, lookup, deletion (`pop`/`clear`), values/keys extraction, update, merge (`\|`), variable swapping, sorting (`sorted`), 1D list matrix, 2D addition via list comprehensions, 3D transpose by axis reversal (no NumPy) | Complete |
 | [6.py](./6.py) | Sports Tournament Points Table Generator | Score parsing (`split`/`map`), conditional counting, points accumulation (3/1/0), dictionary summary | Complete |
+| [7.py](./7.py) | Star Pattern Generator | Nested loops, string repetition (`*`), increasing/decreasing pattern, function abstraction | Complete |
+| [8.py](./8.py) | GCD Calculator | Euclidean algorithm, modulo operation (`%`), tuple unpacking, `while` loop | Complete |
+| [9.py](./9.py) | Character Frequency Counter | Dictionary tally, string iteration, membership testing (`in`), key-value accumulation | Complete |
+| [10.py](./10.py) | Fibonacci Series Generator | Iterative sequence generation, tuple unpacking swap, list accumulation (`append`) | Complete |
+| [11.py](./11.py) | n + nn + nnn Expression Evaluator | String repetition, type conversion (`str`/`int`), arithmetic composition | Complete |
+| [12.py](./12.py) | Longest Word Length Finder | String splitting (`split`), `max` with `key=len`, length calculation (`len`) | Complete |
+| [13.py](./13.py) | Lambda Area Calculator | Lambda functions, square/rectangle/triangle area formulas, formatted output (`:.2f`) | Complete |
 
 ---
 
@@ -93,6 +150,13 @@ This repository contains Python programming laboratory implementations developed
 - **List Operations:** Demonstrate 14 essential list workflows — sorting, reversing, indexed insertion/removal, digit extraction, binary conversion, and manual number reversal with input validation.
 - **Dictionary & Matrix Operations:** Demonstrate 16 workflows — key-value creation, lookup, deletion, merging via `|`, view extraction (`keys`/`values`), in-place update, key-sorted ordering, plus pure-Python 1D/2D/3D matrix creation, 2D addition, and 3D transpose without NumPy.
 - **Score Processing & Aggregation:** Parse hyphen-delimited score strings, classify wins/draws/losses, accumulate league points (3 for win / 1 for draw), and emit a summary dictionary.
+- **Pattern Generation:** Build increasing/decreasing star patterns using nested loops and string repetition with function abstraction.
+- **Mathematical Computation:** Calculate GCD via iterative Euclidean algorithm with modulo and tuple unpacking.
+- **Frequency Analysis:** Count character occurrences using dictionary tallying and membership testing.
+- **Series Generation:** Generate Fibonacci sequences iteratively with tuple swap and list accumulation.
+- **Expression Evaluation:** Compute `n + nn + nnn` via string repetition and type conversion.
+- **Text Analysis:** Find longest word length using `max` with `key=len` after splitting input strings.
+- **Functional Programming:** Calculate geometric areas (square, rectangle, triangle) using concise lambda functions and formatted output.
 
 ---
 
@@ -296,6 +360,136 @@ Summary: {'Wins': 2, 'Draws': 2, 'Losses': 1, 'Total Points': 8}
 
 ---
 
+### Program 7: Star Pattern Generator (`7.py`)
+
+Prints an increasing then decreasing star pattern based on user input, using a function with loop-driven string repetition.
+
+```bash
+python3 7.py
+```
+
+**Example Run:**
+
+```text
+Enter a number: 3
+*
+**
+***
+**
+*
+```
+
+---
+
+### Program 8: GCD Calculator (`8.py`)
+
+Computes the greatest common divisor of two integers using the iterative Euclidean algorithm with modulo and tuple unpacking.
+
+```bash
+python3 8.py
+```
+
+**Example Run:**
+
+```text
+Enter the first number: 48
+Enter the second number: 18
+GCD of 48 and 18: 6
+```
+
+---
+
+### Program 9: Character Frequency Counter (`9.py`)
+
+Counts the frequency of each character in a user-provided string using dictionary tallying.
+
+```bash
+python3 9.py
+```
+
+**Example Run:**
+
+```text
+Enter a string: hello
+Character frequency: {'h': 1, 'e': 1, 'l': 2, 'o': 1}
+```
+
+---
+
+### Program 10: Fibonacci Series Generator (`10.py`)
+
+Generates a Fibonacci series with the specified number of terms using iterative tuple unpacking.
+
+```bash
+python3 10.py
+```
+
+**Example Run:**
+
+```text
+Enter the number of terms: 7
+Fibonacci series: [0, 1, 1, 2, 3, 5, 8]
+```
+
+---
+
+### Program 11: n + nn + nnn Expression Evaluator (`11.py`)
+
+Accepts an integer `n` and computes `n + nn + nnn` via string repetition and type conversion.
+
+```bash
+python3 11.py
+```
+
+**Example Run:**
+
+```text
+Enter a number: 5
+Result of n + nn + nnn: 615
+```
+
+---
+
+### Program 12: Longest Word Length Finder (`12.py`)
+
+Accepts a list of words and returns the length of the longest word using `max` with `key=len`.
+
+```bash
+python3 12.py
+```
+
+**Example Run:**
+
+```text
+Enter words separated by spaces: hi hello world
+Length of the longest word: 5
+```
+
+---
+
+### Program 13: Lambda Area Calculator (`13.py`)
+
+Calculates areas of a square, rectangle, and triangle using lambda functions and formatted output.
+
+```bash
+python3 13.py
+```
+
+**Example Run:**
+
+```text
+Enter the side of the square: 4
+Enter the length of the rectangle: 5
+Enter the width of the rectangle: 3
+Enter the base of the triangle: 6
+Enter the height of the triangle: 4
+Area of square: 16.00
+Area of rectangle: 15.00
+Area of triangle: 12.00
+```
+
+---
+
 ## Repository Structure
 
 ```text
@@ -306,6 +500,13 @@ CET_MCA_1st_Sem_Python_Programming/
 ├── 4.py              # List operations — sort, reverse, insert, remove, pop, clear, digit extract, binary
 ├── 5.py              # Dictionary & matrix — create, lookup, delete, merge, update, swap, sort, 1D/2D/3D pure-Python matrices
 ├── 6.py              # Tournament points — parse scores, count W/D/L, calculate points, build summary dict
+├── 7.py              # Star pattern — increasing/decreasing stars via loops and string repetition
+├── 8.py              # GCD calculator — Euclidean algorithm with modulo and tuple unpacking
+├── 9.py              # Character frequency — dictionary tally of string characters
+├── 10.py             # Fibonacci series — iterative generation with tuple swap
+├── 11.py             # n+nn+nnn expression — string repetition and type conversion
+├── 12.py             # Longest word — split input and max by key length
+├── 13.py             # Area calculator — lambda functions for square/rectangle/triangle
 ├── pyproject.toml    # uv project metadata (requires-python >=3.14)
 ├── uv.lock           # Locked dependency graph
 ├── .python-version   # Python 3.14 pin
