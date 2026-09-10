@@ -120,25 +120,30 @@ flowchart LR
 
 This repository contains Python programming laboratory implementations developed for the first-semester MCA coursework at the College of Engineering Trivandrum (CET). Each program demonstrates fundamental concepts in Python 3.14, spanning user input handling, string parsing, list transformations, dictionary operations, pure-Python matrix workflows (1D/2D addition and 3D transpose without NumPy), score parsing, tournament points aggregation, pattern generation, GCD computation via Euclidean algorithm, character frequency analysis, Fibonacci series generation, string-based numeric expressions, longest word detection, and lambda-based functional area calculations.
 
+Programs are organised into two folders:
+
+- `01_Actual_Lab_Problems/` — record-bound lab programs written for submission.
+- `02_Playground/` — theory-class practice and concept exploration (not for records). Current `1.py`–`13.py` exercises live here.
+
 ---
 
 ## Program Index
 
 | Script         | Topic                             | Key Concepts                                                                                                     | Status   |
 | -------------- | --------------------------------- | ---------------------------------------------------------------------------------------------------------------- | -------- |
-| [1.py](./1.py) | Email Address Parser & Validator  | String splitting (`split`), title formatting (`title`), suffix checking (`endswith`)                             | Complete |
-| [2.py](./2.py) | Shopping Cart Discount Calculator | List manipulation (`min`, `remove`), list comprehension, aggregation (`sum`), decimal formatting                 | Complete |
-| [3.py](./3.py) | String Methods & Slicing Suite    | Case transformation, substring slicing, midpoint division, string strip, character replacement, stride filtering | Complete |
-| [4.py](./4.py) | List Operations Practice          | Sorting (`sort`), reversing (`reverse`), insertion (`insert`/`append`), removal (`remove`/`pop`/`clear`), digit extraction, binary conversion (`bin`), square roots (`math.sqrt`), manual number reversal | Complete |
-| [5.py](./5.py) | Dictionary & Matrix Operations Practice | Dict creation, insertion, lookup, deletion (`pop`/`clear`), values/keys extraction, update, merge (`\|`), variable swapping, sorting (`sorted`), 1D list matrix, 2D addition via list comprehensions, 3D transpose by axis reversal (no NumPy) | Complete |
-| [6.py](./6.py) | Sports Tournament Points Table Generator | Score parsing (`split`/`map`), conditional counting, points accumulation (3/1/0), dictionary summary | Complete |
-| [7.py](./7.py) | Star Pattern Generator | Nested loops, string repetition (`*`), increasing/decreasing pattern, function abstraction | Complete |
-| [8.py](./8.py) | GCD Calculator | Euclidean algorithm, modulo operation (`%`), tuple unpacking, `while` loop | Complete |
-| [9.py](./9.py) | Character Frequency Counter | Dictionary tally, string iteration, membership testing (`in`), key-value accumulation | Complete |
-| [10.py](./10.py) | Fibonacci Series Generator | Iterative sequence generation, tuple unpacking swap, list accumulation (`append`) | Complete |
-| [11.py](./11.py) | n + nn + nnn Expression Evaluator | String repetition, type conversion (`str`/`int`), arithmetic composition | Complete |
-| [12.py](./12.py) | Longest Word Length Finder | String splitting (`split`), `max` with `key=len`, length calculation (`len`) | Complete |
-| [13.py](./13.py) | Lambda Area Calculator | Lambda functions, square/rectangle/triangle area formulas, formatted output (`:.2f`) | Complete |
+| [1.py](./02_Playground/1.py) | Email Address Parser & Validator  | String splitting (`split`), title formatting (`title`), suffix checking (`endswith`)                             | Complete |
+| [2.py](./02_Playground/2.py) | Shopping Cart Discount Calculator | List manipulation (`min`, `remove`), list comprehension, aggregation (`sum`), decimal formatting                 | Complete |
+| [3.py](./02_Playground/3.py) | String Methods & Slicing Suite    | Case transformation, substring slicing, midpoint division, string strip, character replacement, stride filtering | Complete |
+| [4.py](./02_Playground/4.py) | List Operations Practice          | Sorting (`sort`), reversing (`reverse`), insertion (`insert`/`append`), removal (`remove`/`pop`/`clear`), digit extraction, binary conversion (`bin`), square roots (`math.sqrt`), manual number reversal | Complete |
+| [5.py](./02_Playground/5.py) | Dictionary & Matrix Operations Practice | Dict creation, insertion, lookup, deletion (`pop`/`clear`), values/keys extraction, update, merge (`\|`), variable swapping, sorting (`sorted`), 1D list matrix, 2D addition via list comprehensions, 3D transpose by axis reversal (no NumPy) | Complete |
+| [6.py](./02_Playground/6.py) | Sports Tournament Points Table Generator | Score parsing (`split`/`map`), conditional counting, points accumulation (3/1/0), dictionary summary | Complete |
+| [7.py](./02_Playground/7.py) | Star Pattern Generator | Nested loops, string repetition (`*`), increasing/decreasing pattern, function abstraction | Complete |
+| [8.py](./02_Playground/8.py) | GCD Calculator | Euclidean algorithm, modulo operation (`%`), tuple unpacking, `while` loop | Complete |
+| [9.py](./02_Playground/9.py) | Character Frequency Counter | Dictionary tally, string iteration, membership testing (`in`), key-value accumulation | Complete |
+| [10.py](./02_Playground/10.py) | Fibonacci Series Generator | Iterative sequence generation, tuple unpacking swap, list accumulation (`append`) | Complete |
+| [11.py](./02_Playground/11.py) | n + nn + nnn Expression Evaluator | String repetition, type conversion (`str`/`int`), arithmetic composition | Complete |
+| [12.py](./02_Playground/12.py) | Longest Word Length Finder | String splitting (`split`), `max` with `key=len`, length calculation (`len`) | Complete |
+| [13.py](./02_Playground/13.py) | Lambda Area Calculator | Lambda functions, square/rectangle/triangle area formulas, formatted output (`:.2f`) | Complete |
 
 ---
 
@@ -177,7 +182,7 @@ Ensure Python 3.14 or higher is installed (see `.python-version`):
 python3 --version
 ```
 
-All lab programs run on the standard Python runtime with no required third-party dependencies. Pure-Python matrix operations in `5.py` avoid NumPy. If `uv` is available, an optional environment can be set up via:
+All lab programs run on the standard Python runtime with no required third-party dependencies. Pure-Python matrix operations in `02_Playground/5.py` avoid NumPy. If `uv` is available, an optional environment can be set up via:
 
 ```bash
 uv sync
@@ -187,12 +192,12 @@ uv sync
 
 ## Program Usage & Outputs
 
-### Program 1: Email Address Parser (`1.py`)
+### Program 1: Email Address Parser (`02_Playground/1.py`)
 
 Takes an email address as input, separates the username and domain, and verifies whether the domain ends with `.com`.
 
 ```bash
-python3 1.py
+python3 02_Playground/1.py
 ```
 
 **Example Run:**
@@ -207,12 +212,12 @@ Ends With .com? :True
 
 ---
 
-### Program 2: Shopping Cart Price Calculator (`2.py`)
+### Program 2: Shopping Cart Price Calculator (`02_Playground/2.py`)
 
 Removes the lowest-priced item from a price list, applies a 10% discount to all remaining items using list comprehensions, and outputs the final formatted total.
 
 ```bash
-python3 2.py
+python3 02_Playground/2.py
 ```
 
 **Example Run:**
@@ -223,12 +228,12 @@ Final total: $159.75
 
 ---
 
-### Program 3: String Methods Practice (`3.py`)
+### Program 3: String Methods Practice (`02_Playground/3.py`)
 
 Executes a comprehensive sequence of string operations including case conversions, length calculation, substring extraction, string division, character replacement, and index searching.
 
 ```bash
-python3 3.py
+python3 02_Playground/3.py
 ```
 
 **Example Run:**
@@ -254,12 +259,12 @@ Index of "o": -1 (not found)
 
 ---
 
-### Program 4: List Operations Practice (`4.py`)
+### Program 4: List Operations Practice (`02_Playground/4.py`)
 
 Demonstrates 14 common list operations — sorting, reversing, element insertion/removal by value and position, clearing, length counting, digit extraction, binary conversion, square-root mapping, copying, and manual number reversal without built-ins.
 
 ```bash
-python3 4.py
+python3 02_Playground/4.py
 ```
 
 **Example Run (abridged):**
@@ -296,12 +301,12 @@ List after inserting 99 at position 1: [10, 99, 20, 30, 40]
 
 ---
 
-### Program 5: Dictionary & Matrix Operations Practice (`5.py`)
+### Program 5: Dictionary & Matrix Operations Practice (`02_Playground/5.py`)
 
 Demonstrates 16 operations — dictionary creation from user input, key-value insertion, lookup, value deletion vs key removal, clearing, `values()`/`keys()` extraction, in-place update, merging with `|`, variable swapping, key-sorted ordering, plus pure-Python 1D matrix, 2D matrix addition, and 3D transpose without NumPy.
 
 ```bash
-python3 5.py
+python3 02_Playground/5.py
 ```
 
 **Example Run (abridged):**
@@ -343,12 +348,12 @@ Transposed 3D matrix: [[[1, 5], [3, 7]], [[2, 6], [4, 8]]]
 
 ---
 
-### Program 6: Sports Tournament Points Table Generator (`6.py`)
+### Program 6: Sports Tournament Points Table Generator (`02_Playground/6.py`)
 
 Processes a list of hyphen-delimited match scores, compares team vs opponent scores, counts wins/draws/losses, calculates total league points (3 per win, 1 per draw), and stores results in a summary dictionary.
 
 ```bash
-python3 6.py
+python3 02_Playground/6.py
 ```
 
 **Example Run:**
@@ -360,12 +365,12 @@ Summary: {'Wins': 2, 'Draws': 2, 'Losses': 1, 'Total Points': 8}
 
 ---
 
-### Program 7: Star Pattern Generator (`7.py`)
+### Program 7: Star Pattern Generator (`02_Playground/7.py`)
 
 Prints an increasing then decreasing star pattern based on user input, using a function with loop-driven string repetition.
 
 ```bash
-python3 7.py
+python3 02_Playground/7.py
 ```
 
 **Example Run:**
@@ -381,12 +386,12 @@ Enter a number: 3
 
 ---
 
-### Program 8: GCD Calculator (`8.py`)
+### Program 8: GCD Calculator (`02_Playground/8.py`)
 
 Computes the greatest common divisor of two integers using the iterative Euclidean algorithm with modulo and tuple unpacking.
 
 ```bash
-python3 8.py
+python3 02_Playground/8.py
 ```
 
 **Example Run:**
@@ -399,12 +404,12 @@ GCD of 48 and 18: 6
 
 ---
 
-### Program 9: Character Frequency Counter (`9.py`)
+### Program 9: Character Frequency Counter (`02_Playground/9.py`)
 
 Counts the frequency of each character in a user-provided string using dictionary tallying.
 
 ```bash
-python3 9.py
+python3 02_Playground/9.py
 ```
 
 **Example Run:**
@@ -416,12 +421,12 @@ Character frequency: {'h': 1, 'e': 1, 'l': 2, 'o': 1}
 
 ---
 
-### Program 10: Fibonacci Series Generator (`10.py`)
+### Program 10: Fibonacci Series Generator (`02_Playground/10.py`)
 
 Generates a Fibonacci series with the specified number of terms using iterative tuple unpacking.
 
 ```bash
-python3 10.py
+python3 02_Playground/10.py
 ```
 
 **Example Run:**
@@ -433,12 +438,12 @@ Fibonacci series: [0, 1, 1, 2, 3, 5, 8]
 
 ---
 
-### Program 11: n + nn + nnn Expression Evaluator (`11.py`)
+### Program 11: n + nn + nnn Expression Evaluator (`02_Playground/11.py`)
 
 Accepts an integer `n` and computes `n + nn + nnn` via string repetition and type conversion.
 
 ```bash
-python3 11.py
+python3 02_Playground/11.py
 ```
 
 **Example Run:**
@@ -450,12 +455,12 @@ Result of n + nn + nnn: 615
 
 ---
 
-### Program 12: Longest Word Length Finder (`12.py`)
+### Program 12: Longest Word Length Finder (`02_Playground/12.py`)
 
 Accepts a list of words and returns the length of the longest word using `max` with `key=len`.
 
 ```bash
-python3 12.py
+python3 02_Playground/12.py
 ```
 
 **Example Run:**
@@ -467,12 +472,12 @@ Length of the longest word: 5
 
 ---
 
-### Program 13: Lambda Area Calculator (`13.py`)
+### Program 13: Lambda Area Calculator (`02_Playground/13.py`)
 
 Calculates areas of a square, rectangle, and triangle using lambda functions and formatted output.
 
 ```bash
-python3 13.py
+python3 02_Playground/13.py
 ```
 
 **Example Run:**
@@ -494,19 +499,21 @@ Area of triangle: 12.00
 
 ```text
 CET_MCA_1st_Sem_Python_Programming/
-├── 1.py              # Email parser and domain/extension validator
-├── 2.py              # Shopping cart price and discount calculator
-├── 3.py              # String manipulation and built-in methods practice
-├── 4.py              # List operations — sort, reverse, insert, remove, pop, clear, digit extract, binary
-├── 5.py              # Dictionary & matrix — create, lookup, delete, merge, update, swap, sort, 1D/2D/3D pure-Python matrices
-├── 6.py              # Tournament points — parse scores, count W/D/L, calculate points, build summary dict
-├── 7.py              # Star pattern — increasing/decreasing stars via loops and string repetition
-├── 8.py              # GCD calculator — Euclidean algorithm with modulo and tuple unpacking
-├── 9.py              # Character frequency — dictionary tally of string characters
-├── 10.py             # Fibonacci series — iterative generation with tuple swap
-├── 11.py             # n+nn+nnn expression — string repetition and type conversion
-├── 12.py             # Longest word — split input and max by key length
-├── 13.py             # Area calculator — lambda functions for square/rectangle/triangle
+├── 01_Actual_Lab_Problems/   # Record-bound lab programs for submission
+├── 02_Playground/            # Theory-class practice and concept exploration (not for records)
+│   ├── 1.py              # Email parser and domain/extension validator
+│   ├── 2.py              # Shopping cart price and discount calculator
+│   ├── 3.py              # String manipulation and built-in methods practice
+│   ├── 4.py              # List operations — sort, reverse, insert, remove, pop, clear, digit extract, binary
+│   ├── 5.py              # Dictionary & matrix — create, lookup, delete, merge, update, swap, sort, 1D/2D/3D pure-Python matrices
+│   ├── 6.py              # Tournament points — parse scores, count W/D/L, calculate points, build summary dict
+│   ├── 7.py              # Star pattern — increasing/decreasing stars via loops and string repetition
+│   ├── 8.py              # GCD calculator — Euclidean algorithm with modulo and tuple unpacking
+│   ├── 9.py              # Character frequency — dictionary tally of string characters
+│   ├── 10.py             # Fibonacci series — iterative generation with tuple swap
+│   ├── 11.py             # n+nn+nnn expression — string repetition and type conversion
+│   ├── 12.py             # Longest word — split input and max by key length
+│   └── 13.py             # Area calculator — lambda functions for square/rectangle/triangle
 ├── pyproject.toml    # uv project metadata (requires-python >=3.14)
 ├── uv.lock           # Locked dependency graph
 ├── .python-version   # Python 3.14 pin
