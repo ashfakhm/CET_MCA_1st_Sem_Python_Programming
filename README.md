@@ -147,6 +147,23 @@ Programs are organised into two folders:
 
 ---
 
+## Actual Lab Programs Index (`01_Actual_Lab_Problems/`)
+
+| Script | Topic | Key Concepts | Status |
+| ------ | ----- | ------------ | ------ |
+| [01.py](./01_Actual_Lab_Problems/01.py) | Circle Area & Perimeter | Arithmetic expressions, exponent (`**`), formatted output (`:.2f`) | Complete |
+| [02.py](./01_Actual_Lab_Problems/02.py) | Swap Two Numbers | Tuple packing/unpacking (`b,a = a,b`) | Complete |
+| [03.py](./01_Actual_Lab_Problems/03.py) | Largest of Three | Conditional branching (`if`/`elif`/`else`), comparison chaining | Complete |
+| [04.py](./01_Actual_Lab_Problems/04.py) | Basic Arithmetic Operators | `match` statement, operator dispatch, zero-division guard | Complete |
+| [05.py](./01_Actual_Lab_Problems/05.py) | Multiplication Table | `for` loop with `range`, f-string formatting | Complete |
+| [06.py](./01_Actual_Lab_Problems/06.py) | Sum of First 100 Even Numbers | `while` loop, counter guard, modulo (`%`) | Complete |
+| [07.py](./01_Actual_Lab_Problems/07.py) | Factorial | Iterative accumulation, `for` loop with `range` | Complete |
+| [08.py](./01_Actual_Lab_Problems/08.py) | Count Digits | `while` loop, floor division (`//`) | Complete |
+| [09.py](./01_Actual_Lab_Problems/09.py) | Leap Year Checker | Gregorian 400/100/4 rules, conditional branching | Complete |
+| [10.py](./01_Actual_Lab_Problems/10.py) | Quadratic Roots Solver | Discriminant, `math.sqrt`, `a=0` and negative-discriminant guards | Complete |
+
+---
+
 ## Core Capabilities
 
 - **Input Parsing & Validation:** Extract components such as usernames, domains, and top-level extensions from formatted user strings with boundary validation.
@@ -495,11 +512,214 @@ Area of triangle: 12.00
 
 ---
 
+## Actual Lab Programs Usage & Outputs
+
+### Lab 01: Circle Area & Perimeter (`01_Actual_Lab_Problems/01.py`)
+
+Reads the circle radius and prints area and perimeter with `pi=3.14`.
+
+```bash
+python3 01_Actual_Lab_Problems/01.py
+```
+
+**Example Run:**
+
+```text
+Enter Radius Of Circle You Want To Find Area And Perimeter: 5
+Area And Perimeter Of Circle With radius 5 is
+Area = 78.50
+Perimeter is 31.40
+```
+
+---
+
+### Lab 02: Swap Two Numbers (`01_Actual_Lab_Problems/02.py`)
+
+Reads two integers and swaps them via tuple packing/unpacking.
+
+```bash
+python3 01_Actual_Lab_Problems/02.py
+```
+
+**Example Run:**
+
+```text
+Enter Two Number You Want To Swap:
+10
+20
+Currently
+ A has 10 and
+ B has 20
+After Swapping
+ A Now Has 20
+ B Now Has 10
+```
+
+---
+
+### Lab 03: Largest of Three (`01_Actual_Lab_Problems/03.py`)
+
+Reads three integers and prints the largest, reporting equality when all three match.
+
+```bash
+python3 01_Actual_Lab_Problems/03.py
+```
+
+**Example Run:**
+
+```text
+Enter Three Numbers You Want To Find The Largest Of Three
+5
+9
+3
+You Typed 5, 9, 3
+9 is Largest
+```
+
+---
+
+### Lab 04: Basic Arithmetic Operators (`01_Actual_Lab_Problems/04.py`)
+
+Reads two integers plus an operator and evaluates `+`, `-`, `*`, `/` via `match`, with a zero-division guard.
+
+```bash
+python3 01_Actual_Lab_Problems/04.py
+```
+
+**Example Run:**
+
+```text
+Enter Two Numbers You Want to Do Basic Arithmetic Operations
+Enter first number: 8
+Enter second number: 2
+Enter operation (+, -, *, /): *
+16
+```
+
+---
+
+### Lab 05: Multiplication Table (`01_Actual_Lab_Problems/05.py`)
+
+Reads a number and a count `n`, then prints the `number x i` table for `i` in `1..n`.
+
+```bash
+python3 01_Actual_Lab_Problems/05.py
+```
+
+**Example Run:**
+
+```text
+Enter a number: 5
+How many multiples? 3
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+```
+
+---
+
+### Lab 06: Sum of First 100 Even Numbers (`01_Actual_Lab_Problems/06.py`)
+
+Accumulates the first 100 even numbers with a `while` loop and counter guard (no input needed).
+
+```bash
+python3 01_Actual_Lab_Problems/06.py
+```
+
+**Example Run:**
+
+```text
+Sum Of First 100 Even Numbers Are 10100
+```
+
+---
+
+### Lab 07: Factorial (`01_Actual_Lab_Problems/07.py`)
+
+Reads `n` and computes the factorial by iterative accumulation.
+
+```bash
+python3 01_Actual_Lab_Problems/07.py
+```
+
+**Example Run:**
+
+```text
+Enter The Number You Want To Find Factorial of: 5
+Factorial of 5 is 120
+```
+
+---
+
+### Lab 08: Count Digits (`01_Actual_Lab_Problems/08.py`)
+
+Reads a positive integer and counts its digits by repeated floor division.
+
+```bash
+python3 01_Actual_Lab_Problems/08.py
+```
+
+**Example Run:**
+
+```text
+Enter The Number You Want To Find The Count Of Digits: 12345
+The Number Of Digits in 12345 is 5
+```
+
+---
+
+### Lab 09: Leap Year Checker (`01_Actual_Lab_Problems/09.py`)
+
+Reads a year and applies the Gregorian 400/100/4 rules.
+
+```bash
+python3 01_Actual_Lab_Problems/09.py
+```
+
+**Example Run:**
+
+```text
+Enter a year: 2000
+Leap year
+```
+
+---
+
+### Lab 10: Quadratic Roots Solver (`01_Actual_Lab_Problems/10.py`)
+
+Reads `a`, `b`, `c` and solves real roots via the discriminant, guarding `a=0` and negative discriminants.
+
+```bash
+python3 01_Actual_Lab_Problems/10.py
+```
+
+**Example Run:**
+
+```text
+Enter a: 1
+Enter b: -3
+Enter c: 2
+Root 1: 2.0
+Root 2: 1.0
+```
+
+---
+
 ## Repository Structure
 
 ```text
 CET_MCA_1st_Sem_Python_Programming/
 ├── 01_Actual_Lab_Problems/   # Record-bound lab programs for submission
+│   ├── 01.py             # Circle area and perimeter with pi=3.14
+│   ├── 02.py             # Swap two numbers via tuple unpacking
+│   ├── 03.py             # Largest of three with equality guard
+│   ├── 04.py             # Arithmetic operators via match with zero-division guard
+│   ├── 05.py             # Multiplication table printer
+│   ├── 06.py             # Sum of first 100 even numbers (while loop)
+│   ├── 07.py             # Factorial via iterative loop
+│   ├── 08.py             # Digit counter with floor division
+│   ├── 09.py             # Gregorian leap-year checker
+│   └── 10.py             # Quadratic real-roots solver
 ├── 02_Playground/            # Theory-class practice and concept exploration (not for records)
 │   ├── 1.py              # Email parser and domain/extension validator
 │   ├── 2.py              # Shopping cart price and discount calculator
