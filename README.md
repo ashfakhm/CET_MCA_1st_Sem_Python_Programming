@@ -161,6 +161,11 @@ Programs are organised into two folders:
 | [08.py](./01_Actual_Lab_Problems/08.py) | Count Digits | `while` loop, floor division (`//`) | Complete |
 | [09.py](./01_Actual_Lab_Problems/09.py) | Leap Year Checker | Gregorian 400/100/4 rules, conditional branching | Complete |
 | [10.py](./01_Actual_Lab_Problems/10.py) | Quadratic Roots Solver | Discriminant, `math.sqrt`, `a=0` and negative-discriminant guards | Complete |
+| [11.py](./01_Actual_Lab_Problems/11.py) | First & Last Character Swap | String slicing (`[0]`, `[-1]`, `[1:-1]`), concatenation, length guard (`len(s) >= 2`) | Complete |
+| [12.py](./01_Actual_Lab_Problems/12.py) | First & Last Colours | Comma separation (`split(',')`), list comprehension, whitespace strip (`strip()`) | Complete |
+| [13.py](./01_Actual_Lab_Problems/13.py) | Character Swap at Same Position | String pairing (`zip`), character alternation accumulation | Complete |
+| [14.py](./01_Actual_Lab_Problems/14.py) | Sort Dictionary by Keys | `sorted()` with `lambda`, dictionary reconstruction (`dict()`), ascending and descending (`reverse=True`) | Complete |
+| [15.py](./01_Actual_Lab_Problems/15.py) | Merge Two Dictionaries | Dictionary copying (`copy()`), in-place update (`update()`) | Complete |
 
 ---
 
@@ -705,6 +710,92 @@ Root 2: 1.0
 
 ---
 
+### Lab 11: First & Last Character Swap (`01_Actual_Lab_Problems/11.py`)
+
+Swaps the first and last characters of a user-supplied string using slicing and concatenation, requiring at least 2 characters.
+
+```bash
+python3 01_Actual_Lab_Problems/11.py
+```
+
+**Example Run:**
+
+```text
+Enter a string: python
+New string: nythop
+```
+
+---
+
+### Lab 12: First & Last Colours (`01_Actual_Lab_Problems/12.py`)
+
+Parses a comma-separated list of colors, trims whitespace with list comprehension, and prints the first and last entries.
+
+```bash
+python3 01_Actual_Lab_Problems/12.py
+```
+
+**Example Run:**
+
+```text
+Enter colours separated by commas: red, green, blue, yellow
+First colour: red
+Last colour: yellow
+```
+
+---
+
+### Lab 13: Character Swap at Same Position (`01_Actual_Lab_Problems/13.py`)
+
+Pairs characters from two input strings using `zip()` and alternates their order (`b + a`) into a single resulting string.
+
+```bash
+python3 01_Actual_Lab_Problems/13.py
+```
+
+**Example Run:**
+
+```text
+Enter first string: abc
+Enter second string: xyz
+Result: xaybzc
+```
+
+---
+
+### Lab 14: Sort Dictionary by Keys (`01_Actual_Lab_Problems/14.py`)
+
+Sorts a student dictionary by keys in ascending and descending order using `sorted()` with a lambda key extractor.
+
+```bash
+python3 01_Actual_Lab_Problems/14.py
+```
+
+**Example Run:**
+
+```text
+Ascending order: {'Age': 22, 'Gender': 'M', 'Name': 'Ashfakh', 'Phone': None}
+Descending order: {'Phone': None, 'Name': 'Ashfakh', 'Gender': 'M', 'Age': 22}
+```
+
+---
+
+### Lab 15: Merge Two Dictionaries (`01_Actual_Lab_Problems/15.py`)
+
+Merges two dictionaries by making a shallow copy of the first and updating it in-place with the second dictionary.
+
+```bash
+python3 01_Actual_Lab_Problems/15.py
+```
+
+**Example Run:**
+
+```text
+Merged dictionary: {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+```
+
+---
+
 ## Repository Structure
 
 ```text
@@ -719,7 +810,12 @@ CET_MCA_1st_Sem_Python_Programming/
 │   ├── 07.py             # Factorial via iterative loop
 │   ├── 08.py             # Digit counter with floor division
 │   ├── 09.py             # Gregorian leap-year checker
-│   └── 10.py             # Quadratic real-roots solver
+│   ├── 10.py             # Quadratic real-roots solver
+│   ├── 11.py             # Swap first and last character of a string
+│   ├── 12.py             # First and last colors from comma-separated input
+│   ├── 13.py             # Merge two strings by swapping characters at matching positions
+│   ├── 14.py             # Sort dictionary keys in ascending and descending order
+│   └── 15.py             # Merge two dictionaries via copy and update
 ├── 02_Playground/            # Theory-class practice and concept exploration (not for records)
 │   ├── 1.py              # Email parser and domain/extension validator
 │   ├── 2.py              # Shopping cart price and discount calculator
