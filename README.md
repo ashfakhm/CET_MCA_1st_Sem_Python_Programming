@@ -166,7 +166,7 @@ Programs are organised into two folders:
 | [13.py](./01_Actual_Lab_Problems/13.py) | Character Swap at Same Position | String pairing (`zip`), character alternation accumulation | Complete |
 | [14.py](./01_Actual_Lab_Problems/14.py) | Sort Dictionary by Keys | `sorted()` with `lambda`, dictionary reconstruction (`dict()`), ascending and descending (`reverse=True`) | Complete |
 | [15.py](./01_Actual_Lab_Problems/15.py) | Merge Two Dictionaries | Dictionary copying (`copy()`), in-place update (`update()`) | Complete |
-| [16.py](./01_Actual_Lab_Problems/16.py) | Greatest Common Divisor | Euclidean algorithm, modulo operation (`%`), tuple unpacking, `while` loop | Complete |
+| [16.py](./01_Actual_Lab_Problems/16.py) | Greatest Common Divisor | Euclidean algorithm, modulo operation (`%`), remainder variable, `while` loop | Complete |
 | [17.py](./01_Actual_Lab_Problems/17.py) | Remove Even Numbers from a List | List comprehension, modulo operation (`%`), list filtering | Complete |
 
 ---
@@ -180,7 +180,7 @@ Programs are organised into two folders:
 - **Dictionary & Matrix Operations:** Demonstrate 16 workflows — key-value creation, lookup, deletion, merging via `|`, view extraction (`keys`/`values`), in-place update, key-sorted ordering, plus pure-Python 1D/2D/3D matrix creation, 2D addition, and 3D transpose without NumPy.
 - **Score Processing & Aggregation:** Parse hyphen-delimited score strings, classify wins/draws/losses, accumulate league points (3 for win / 1 for draw), and emit a summary dictionary.
 - **Pattern Generation:** Build increasing/decreasing star patterns using nested loops and string repetition with function abstraction.
-- **Mathematical Computation:** Calculate GCD via iterative Euclidean algorithm with modulo and tuple unpacking.
+- **Mathematical Computation:** Calculate GCD via iterative Euclidean algorithm with modulo and explicit remainder updates.
 - **Frequency Analysis:** Count character occurrences using dictionary tallying and membership testing.
 - **Series Generation:** Generate Fibonacci sequences iteratively with tuple swap and list accumulation.
 - **Expression Evaluation:** Compute `n + nn + nnn` via string repetition and type conversion.
