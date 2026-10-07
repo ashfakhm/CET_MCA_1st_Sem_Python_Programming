@@ -166,6 +166,8 @@ Programs are organised into two folders:
 | [13.py](./01_Actual_Lab_Problems/13.py) | Character Swap at Same Position | String pairing (`zip`), character alternation accumulation | Complete |
 | [14.py](./01_Actual_Lab_Problems/14.py) | Sort Dictionary by Keys | `sorted()` with `lambda`, dictionary reconstruction (`dict()`), ascending and descending (`reverse=True`) | Complete |
 | [15.py](./01_Actual_Lab_Problems/15.py) | Merge Two Dictionaries | Dictionary copying (`copy()`), in-place update (`update()`) | Complete |
+| [16.py](./01_Actual_Lab_Problems/16.py) | Greatest Common Divisor | Euclidean algorithm, modulo operation (`%`), tuple unpacking, `while` loop | Complete |
+| [17.py](./01_Actual_Lab_Problems/17.py) | Remove Even Numbers from a List | List comprehension, modulo operation (`%`), list filtering | Complete |
 
 ---
 
@@ -796,6 +798,41 @@ Merged dictionary: {'a': 1, 'b': 2, 'c': 3, 'd': 4}
 
 ---
 
+### Lab 16: Greatest Common Divisor (`01_Actual_Lab_Problems/16.py`)
+
+Calculates the greatest common divisor of two integers using the iterative Euclidean algorithm.
+
+```bash
+python3 01_Actual_Lab_Problems/16.py
+```
+
+**Example Run:**
+
+```text
+Enter the first number: 48
+Enter the second number: 18
+GCD: 6
+```
+
+---
+
+### Lab 17: Remove Even Numbers from a List (`01_Actual_Lab_Problems/17.py`)
+
+Creates a new list containing only the odd numbers from the input list.
+
+```bash
+python3 01_Actual_Lab_Problems/17.py
+```
+
+**Example Run:**
+
+```text
+Enter numbers separated by spaces: 1 2 3 4 5 6
+List after removing even numbers: [1, 3, 5]
+```
+
+---
+
 ## Repository Structure
 
 ```text
@@ -815,7 +852,9 @@ CET_MCA_1st_Sem_Python_Programming/
 │   ├── 12.py             # First and last colors from comma-separated input
 │   ├── 13.py             # Merge two strings by swapping characters at matching positions
 │   ├── 14.py             # Sort dictionary keys in ascending and descending order
-│   └── 15.py             # Merge two dictionaries via copy and update
+│   ├── 15.py             # Merge two dictionaries via copy and update
+│   ├── 16.py             # Find the GCD of two integers with Euclidean algorithm
+│   └── 17.py             # Remove even numbers from a list
 ├── 02_Playground/            # Theory-class practice and concept exploration (not for records)
 │   ├── 1.py              # Email parser and domain/extension validator
 │   ├── 2.py              # Shopping cart price and discount calculator
