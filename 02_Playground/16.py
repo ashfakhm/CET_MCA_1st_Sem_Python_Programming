@@ -12,6 +12,9 @@ class Person:
         print("Age:", self.age)
         print("Gender:", self.gender)
 
+    def work(self):
+        pass
+
 
 class Student(Person):
     def work(self):
