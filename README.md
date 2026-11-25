@@ -168,6 +168,15 @@ Programs are organised into two folders:
 | [15.py](./01_Actual_Lab_Problems/15.py) | Merge Two Dictionaries | Dictionary copying (`copy()`), in-place update (`update()`) | Complete |
 | [16.py](./01_Actual_Lab_Problems/16.py) | Greatest Common Divisor | Euclidean algorithm, modulo operation (`%`), remainder variable, `while` loop | Complete |
 | [17.py](./01_Actual_Lab_Problems/17.py) | Remove Even Numbers from a List | List comprehension, modulo operation (`%`), list filtering | Complete |
+| [18.py](./01_Actual_Lab_Problems/18.py) | Factorial Using a Function | Function definition, iterative accumulation | Complete |
+| [19.py](./01_Actual_Lab_Problems/19.py) | Fibonacci Series | Iterative sequence generation, tuple assignment | Complete |
+| [20.py](./01_Actual_Lab_Problems/20.py) | Character Frequency | Dictionary counting, `dict.get()` | Complete |
+| [21.py](./01_Actual_Lab_Problems/21.py) | Add String Suffix | `str.endswith()`, conditional concatenation | Complete |
+| [22.py](./01_Actual_Lab_Problems/22.py) | Nested-Loop Star Pattern | Nested `for` loops, ascending and descending rows | Complete |
+| [23.py](./01_Actual_Lab_Problems/23.py) | Graphics Package | Packages, built-in `math` module, selective and wildcard imports | Complete |
+| [24.py](./01_Actual_Lab_Problems/24.py) | Bank Account | Constructor, deposit and withdrawal methods | Complete |
+| [25.py](./01_Actual_Lab_Problems/25.py) | Time Addition | Private attributes, `__add__` operator overloading | Complete |
+| [26.py](./01_Actual_Lab_Problems/26.py) | Publisher, Book, Python | Inheritance, base constructors, method overriding | Complete |
 
 ---
 
@@ -833,6 +842,80 @@ List after removing even numbers: [1, 3, 5]
 
 ---
 
+### Lab 18: Factorial Using a Function (`01_Actual_Lab_Problems/18.py`)
+
+Defines a function to calculate the factorial of a non-negative integer.
+
+```bash
+python3 01_Actual_Lab_Problems/18.py
+```
+
+### Lab 19: Fibonacci Series (`01_Actual_Lab_Problems/19.py`)
+
+Reads the number of terms and displays that many Fibonacci numbers.
+
+```bash
+python3 01_Actual_Lab_Problems/19.py
+```
+
+### Lab 20: Character Frequency (`01_Actual_Lab_Problems/20.py`)
+
+Counts each character in the input string using a dictionary.
+
+```bash
+python3 01_Actual_Lab_Problems/20.py
+```
+
+### Lab 21: Add String Suffix (`01_Actual_Lab_Problems/21.py`)
+
+Appends `ing` to the input string, or appends `ly` when the string already ends in `ing`.
+
+```bash
+python3 01_Actual_Lab_Problems/21.py
+```
+
+### Lab 22: Nested-Loop Star Pattern (`01_Actual_Lab_Problems/22.py`)
+
+Prints the fixed five-row ascending and descending star pattern using nested loops.
+
+```bash
+python3 01_Actual_Lab_Problems/22.py
+```
+
+### Lab 23: Graphics Package (`01_Actual_Lab_Problems/23.py`)
+
+Uses the `graphics` package modules for rectangle, circle, cuboid, and sphere calculations. It demonstrates module, selective, and wildcard imports; the 3D subpackage is loaded dynamically because its required name contains a hyphen.
+
+```bash
+python3 01_Actual_Lab_Problems/23.py
+```
+
+### Lab 24: Bank Account (`01_Actual_Lab_Problems/24.py`)
+
+Creates a bank account with a constructor, then performs and reports a deposit and withdrawal.
+
+```bash
+python3 01_Actual_Lab_Problems/24.py
+```
+
+### Lab 25: Time Addition (`01_Actual_Lab_Problems/25.py`)
+
+Adds two times using private attributes and an overloaded `+` operator.
+
+```bash
+python3 01_Actual_Lab_Problems/25.py
+```
+
+### Lab 26: Publisher, Book, Python (`01_Actual_Lab_Problems/26.py`)
+
+Displays Python book details through a three-level inheritance hierarchy, base-class constructor invocation, and method overriding.
+
+```bash
+python3 01_Actual_Lab_Problems/26.py
+```
+
+---
+
 ## Repository Structure
 
 ```text
@@ -854,7 +937,24 @@ CET_MCA_1st_Sem_Python_Programming/
 │   ├── 14.py             # Sort dictionary keys in ascending and descending order
 │   ├── 15.py             # Merge two dictionaries via copy and update
 │   ├── 16.py             # Find the GCD of two integers with Euclidean algorithm
-│   └── 17.py             # Remove even numbers from a list
+│   ├── 17.py             # Remove even numbers from a list
+│   ├── 18.py             # Factorial using a function
+│   ├── 19.py             # Fibonacci series
+│   ├── 20.py             # Character frequency in a string
+│   ├── 21.py             # Add ing or ly suffix to a string
+│   ├── 22.py             # Nested-loop ascending and descending star pattern
+│   ├── 23.py             # Import and use the graphics package
+│   ├── 24.py             # Bank account deposit and withdrawal
+│   ├── 25.py             # Add times with private attributes and overloaded +
+│   ├── 26.py             # Publisher, Book, Python inheritance example
+│   └── graphics/
+│       ├── __init__.py
+│       ├── rectangle.py
+│       ├── circle.py
+│       └── 3D-graphics/
+│           ├── __init__.py
+│           ├── cuboid.py
+│           └── sphere.py
 ├── 02_Playground/            # Theory-class practice and concept exploration (not for records)
 │   ├── 1.py              # Email parser and domain/extension validator
 │   ├── 2.py              # Shopping cart price and discount calculator
